@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PinDropper</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <link rel="stylesheet" href="/fontAwesome/css/font-awesome.css" />
+    <script src="https://raw.github.com/wycats/handlebars.js/1.0.0-rc.3/dist/handlebars.js"></script>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBU05l4EQ1sghzWXXuRntMjLVYEcfAos6k&sensor=true">
+    </script>
+    <script id="des-template" type="text/x-handlebars-template">
+      <div class="destination" marker={{id}}>
+        <div class="label"><span>{{id}}</span></div>
+        <input type="text" marker={{id}} placeholder="City/Village/Town"  value="{{address}}" />
+      </div>
+    </script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="logo"><span>Pin Dropper</span></div>
+      <a id="newPlot" href="/">
+        <span>New Plot <i class="icon-external-link"></i>  </span>
+      </a>
+    </div>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  lat: MyString
+  lng: MyString
+  value: MyString
+  map_id: 1
+  markerId: 1
+
+two:
+  lat: MyString
+  lng: MyString
+  value: MyString
+  map_id: 1
+  markerId: 1

@@ -1,0 +1,48 @@
+<script type="text/javascript"
+  src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBU05l4EQ1sghzWXXuRntMjLVYEcfAos6k&sensor=true">
+</script>
+
+
+<script id="des-template" type="text/x-handlebars-template">
+  <div class="destination" marker={{id}}>
+    <div class="label"><span>{{id}}</span></div>
+    <input type="text" marker={{id}} placeholder="City/Village/Town"  value="{{address}}" />
+  </div>
+</script>
+
+
+
+<%=stylesheet_link_tag "app"%>
+<div id="map"></div>
+
+<div id="country">
+    <input class="countrySearch" type="text" placeholder="Enter a country" />
+    <i class="icon-search"></i>
+    <div class="searchResults"></div>
+</div>
+<div id="markers">
+  <div id="marker" class="drag" style="background-image: url('http://maps.gstatic.com/mapfiles/ms/icons/ltblue-dot.png')">
+  </div>
+  <div id="addDes">
+    <span>Add a destination</span> </br>
+    <i class="icon-plus-sign-alt"></i>
+  </div>
+</div>
+
+<div id="list">
+  <p>Press "Enter" After Enter A Location </p>
+  <div class="list_content">
+    <div class="destination" marker=0>
+      <div class="label"><span>0</span></div>
+      <input type="text" marker=0 placeholder="City/Village/Town"  />
+    </div>
+  </div>
+  <div id="save">
+    <span>Save Plot</span>
+  </div>
+</div>
+
+<%=javascript_include_tag "map"%>
+<script type="text/javascript">
+  window.app=new MapApp()
+</script>
